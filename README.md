@@ -38,6 +38,9 @@ Visit [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) to access the int
 
 The project is deployed on Render. Use the provided base URL to access the live API.
 
+### Base Url
+https://student-management-mfyt.onrender.com/
+
 ## API Endpoints
 
 **Base URL**: `<Deployed URL>`
