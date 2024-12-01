@@ -1,20 +1,33 @@
 # Student Management System API
 
-This is a backend API built using FastAPI and MongoDB Atlas for managing students. The API supports creating, retrieving, updating, and deleting student records.
+This project is a **Student Management System API**, built using **FastAPI** and integrated with **MongoDB Atlas** for database storage. It provides a complete backend solution for managing student records.
 
 ## Features
+- Perform **CRUD operations** (Create, Read, Update, Delete) on student data.
+- Integrated with **MongoDB Atlas** for secure and scalable data storage.
+- Interactive API documentation available via **Swagger UI**.
+- Fully deployed and live on **Render**.
 
-- Create a new student
-- Retrieve all students with optional filters (e.g., country, age)
-- Fetch a student by ID
-- Update a student's details
-- Delete a student
+---
 
 ## Tech Stack
+- **Language**: Python
+- **Framework**: FastAPI
+- **Database**: MongoDB Atlas (M0 Free Cluster)
+- **Server**: Uvicorn ASGI server
+- **Deployment**: Render
 
-- **Backend Framework**: FastAPI
-- **Database**: MongoDB (Atlas M0 Free Tier)
-- **ORM**: Motor (Async driver for MongoDB)
+---
+
+## Live API
+The application is deployed and running live at the following URL:  
+**Base URL**: [https://student-management-mfyt.onrender.com](https://student-management-mfyt.onrender.com)
+
+### API Documentation
+You can explore the API endpoints using the Swagger UI:  
+**Swagger UI**: [https://student-management-mfyt.onrender.com/docs](https://student-management-mfyt.onrender.com/docs)
+
+---
 
 ## How to Run Locally
 
@@ -38,8 +51,6 @@ Visit [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) to access the int
 
 The project is deployed on Render. Use the provided base URL to access the live API.
 
-### Base Url
-https://student-management-mfyt.onrender.com/
 
 ## API Endpoints
 
@@ -68,3 +79,5 @@ To run the application, you will need to set up your MongoDB connection. Follow 
    ```bash
    uvicorn app.main:app --reload
    ```
+
+I will change me MongoDB cluster soon
