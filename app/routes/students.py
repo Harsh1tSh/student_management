@@ -14,12 +14,14 @@ def student_helper(student) -> dict:
         "address": student["address"],
     }
 
+
 # Create a new student
 @router.post("/students", status_code=201)
 async def create_student(student: Student):
     student_dict = student.dict()
     result = await students_collection.insert_one(student_dict)
     return {"id": str(result.inserted_id)}
+
 
 # Get a list of students (with optional filters)
 @router.get("/students")
@@ -33,6 +35,7 @@ async def list_students(country: str = None, age: int = None):
     students = await students_collection.find(query).to_list(100)
     return {"data": [student_helper(student) for student in students]}
 
+
 # Get a single student by ID
 @router.get("/students/{id}")
 async def fetch_student(id: str):
@@ -40,6 +43,7 @@ async def fetch_student(id: str):
     if student is None:
         raise HTTPException(status_code=404, detail="Student not found")
     return student_helper(student)
+
 
 # Update a student by ID
 @router.patch("/students/{id}", status_code=204)
@@ -51,6 +55,7 @@ async def update_student(id: str, student: Student):
     if result.matched_count == 0:
         raise HTTPException(status_code=404, detail="Student not found")
     return
+
 
 # Delete a student by ID
 @router.delete("/students/{id}")

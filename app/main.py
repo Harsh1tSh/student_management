@@ -6,7 +6,7 @@ app = FastAPI(
     description="API for managing students using FastAPI and MongoDB Atlas.",
 )
 
-# Include the students router
+
 app.include_router(students.router)
 
 @app.get("/")
