@@ -80,4 +80,4 @@ To run the application, you will need to set up your MongoDB connection. Follow 
    uvicorn app.main:app --reload
    ```
 
-I will change me MongoDB cluster soon
+You have to create the MongoDB cluster and then connect it with the application
