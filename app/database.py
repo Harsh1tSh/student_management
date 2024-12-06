@@ -2,7 +2,7 @@ import os
 from motor.motor_asyncio import AsyncIOMotorClient
 
 # MongoDB Atlas connection URI
-MONGO_URI = "mongodb+srv://admin:adminpassword123@cluster0.1kadn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MONGO_URI = #here yu will entreryour mongodb uri
 
 # Connect to the database
 client = AsyncIOMotorClient(MONGO_URI)
